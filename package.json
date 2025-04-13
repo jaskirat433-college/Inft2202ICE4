@@ -1,0 +1,33 @@
+{
+  "name": "ice_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/server/server.js",
+    "clean": "rimraf dist",
+    "clean-build": "npm run clean && npm run build",
+    "watch": "tsc --watch",
+    "start:dev": "nodemon dist/server/server.js",
+    "dev": "concurrently \"npm run watch\" \"npm run start:dev\""
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/jquery": "^3.5.32",
+    "@types/node": "^22.14.1",
+    "concurrently": "^8.2.0",
+    "nodemon": "^3.1.9",
+    "rimraf": "^6.0.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.15.0",
+    "typescript": "^5.8.3"
+  }
+}
